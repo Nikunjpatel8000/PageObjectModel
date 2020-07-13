@@ -19,7 +19,7 @@ public class ElectronicsPage extends Util {//ElectronicsPage is sub class of Uti
 
     public void verifyUserIsOnElectronicsPage() {
         //assert equals for expect and actual result
-       Assert.assertEquals(getTextFromElement(_welcomeMsgElectronics),expectWelcomeMsgElectronics,"User Is Not Electronics Page");
+        Assert.assertEquals(getTextFromElement(_welcomeMsgElectronics),expectWelcomeMsgElectronics,"User Is Not Electronics Page");
     }
     public void clickOnElectronicsCategory() {
         //wait for 10 second for clickable
