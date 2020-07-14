@@ -5,7 +5,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Util extends BasePage {//Util is sub class of BasePage class
+    public class Util extends BasePage {//Util is sub class of BasePage class
 
     //Reusable method for Thread.sleep
     public static void sleep(int a) {
