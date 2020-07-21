@@ -1,7 +1,10 @@
 package org.example;
 
 
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 public class BaseTest extends Util{//BaseTest is sub class of Util class
@@ -13,10 +16,16 @@ public class BaseTest extends Util{//BaseTest is sub class of Util class
         browserManager.setChromeBrowser();//call Method of BrowserManager class
     }
 
-    @AfterTest//Run After The All Test
-    public void closeBrowser(){
+    @AfterMethod//Run After The All Test
+    public void closeBrowser(ITestResult result){
+        //if test failure then screen shot
+        if (ITestResult.FAILURE == result.getStatus())
+        {//screen shot name
+           takeScreenShot(result.getName() + timeStamp());
+        }
+
         //call Method of BrowserManager class
-        browserManager.closeBrowser();//close browser
+                browserManager.closeBrowser();//close browser
     }
 
 

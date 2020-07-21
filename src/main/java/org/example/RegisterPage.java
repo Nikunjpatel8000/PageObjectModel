@@ -3,7 +3,7 @@ package org.example;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
-public class RegisterPage  extends Util{//RegisterPage is sub class of Util class
+public class RegisterPage extends Util {//RegisterPage is sub class of Util class
     //Create a variable for store xpath value.
     private By _selectGender = By.xpath("//input[@id=\"gender-male\"]");
     //Create a variable for store xpath value.
@@ -52,7 +52,7 @@ public class RegisterPage  extends Util{//RegisterPage is sub class of Util clas
         //select by month use by visible text (Drop Down).
         selectFromDropDownByVisibleText(_dateOfMonth,"November");
         //select by day use by value (Drop Down).
-        selectFromDropDownByValu(_dateOfYear,"1990");
+        selectFromDropDownByValue(_dateOfYear,"1990");
         //Type Text Email Id (Text Box).
         typeText(_emailId,"testing+"+timeStamp()+"@gmail.com");
         //type Text Company Name (Text Box).
